@@ -8,6 +8,7 @@ void add(int (&nums)[101], int &numTracker, int value);
 void remove(int (&nums)[101]);
 void sort(int (&nums)[101], int index);
 void display(int nums [101], int numTracker);
+void deleteSort(int (&nums)[101], int numTracker);
 
 int main(){
   cout << "Are you entering data by console or by file? Type c for console and f for file" << endl;
@@ -29,7 +30,6 @@ int main(){
       nums[numTracker] = x;
       cout << "X: " << x          << endl;
       add(nums, numTracker, nums[numTracker]);
-      display(nums, numTracker);
       
     }
     cout << nums[1] << nums[2] << nums [3] << endl;
@@ -71,6 +71,12 @@ void sort(int (&nums)[101], int index){
   return;
   
 }
+void deleteSort(int (&nums)[101], int numTracker){
+  
+
+
+
+}
 void add (int (&nums)[101], int &numTracker, int value){
   nums[numTracker] = value;
   cout << "NUMTRACKER: " << numTracker << "VALUE: " << value << endl;
@@ -79,7 +85,11 @@ void add (int (&nums)[101], int &numTracker, int value){
   return;
 }
 
-void remove(int (&nums)[101]){
+void remove(int (&nums)[101], int &numTracker){
+  nums[numTracker] = value;
+  nums[1] = value;
+  nums[numTracker] = NULL;
+  numTracker = numTracker - 1;
   
 
 
@@ -87,12 +97,10 @@ void remove(int (&nums)[101]){
 }
 
 void display(int nums [101], int numTracker){
-  for(int i = 1; i < numTracker; i++){
+  for(int i = 0; i < numTracker; i++){
     cout << nums[i];
+
   }
-  cout << endl;
-
-
-
+  
 }
 
