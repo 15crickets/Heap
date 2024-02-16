@@ -87,12 +87,6 @@ void remove(int (&nums)[101]){
 }
 
 void display(int nums [101], int numTracker){
-  for(int i = 1; i < numTracker; i++){
-    cout << nums[i];
-  }
-  cout << endl;
-
-
-
+  
 }
 
