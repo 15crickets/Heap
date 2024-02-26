@@ -165,6 +165,7 @@ void addMethod (int (&nums)[101], int &numTracker, int value){
 
 //this method swaps the first and last numbers and then removes the new last number, before calling the function that sorts the table.
 void remove(int (&nums)[101], int &numTracker){
+  cout << "Number removed: " << nums[1] << endl;
   int value = nums[numTracker];
   nums[1] = value;
   nums[numTracker] = -1;
