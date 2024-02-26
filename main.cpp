@@ -15,7 +15,7 @@ int main(){
   char method;
   cin >> method;
   cin.get();
-  int numTracker = 0;
+  int numTracker = 1;
   int nums[101];
   if(method == 'c'){
     cout << "How many numbers will you be inputting? " << endl;
@@ -32,7 +32,8 @@ int main(){
       add(nums, numTracker, nums[numTracker]);
       
     }
-    cout << nums[1] << nums[2] << nums [3] << endl;
+    numTracker = numTracker - 1;
+    cout << nums[10] << " " << nums[11] << " " << endl;
     display(nums, numTracker);    
   }
   if(method == 'f'){
@@ -123,6 +124,7 @@ void remove(int (&nums)[101], int &numTracker){
   nums[1] = value;
   nums[numTracker] = -1;
   numTracker = numTracker - 1;
+  display(nums, numTracker);
   deleteSort(nums, numTracker, 1);
   
 
@@ -131,8 +133,8 @@ void remove(int (&nums)[101], int &numTracker){
 }
 
 void display(int nums [101], int numTracker){
-  for(int i = 1; i < numTracker; i++){
-    cout << nums[i];
+  for(int i = 1; i <= numTracker; i++){
+    cout << nums[i] << " " << endl;
 
   }
   
